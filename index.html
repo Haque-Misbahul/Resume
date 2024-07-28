@@ -62,6 +62,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#section4">Experience</a></li>
                 <li><a href="#section5">My Work</a></li>
                 <li><a href="#section6">Contact Me</a></li>
+                <li><a href="#section7">Download CV</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -99,14 +100,15 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2 style="color: black;">About Me</h2>
             <div class="line-dec"></div>
-            <h4 style="color: black;">
+            <h3 style="color: black;">
               "As a Passionate and enthusiastic software developer looking for an
               opportunity to serve and contribute to the growth of your
               organization."
-            </h4>
+            </h3>
           </div>
           <div class="intro-section">
             <div class="row">
+               <!-- 
               <div class="col-md-5">
                 <div class="left-image">
                   <img
@@ -116,8 +118,8 @@ https://templatemo.com/tm-531-reflux
                     style="width: 100%; height: auto; border-radius: 10px;"
                   />
                 </div>
-              </div>
-              <div class="col-md-7">
+              </div> -->
+              <div class="col-md-12">
                 <div class="right-text">
                   <h4 style="color: black;">
                     I am a motivated individual passionate about lifelong
@@ -527,98 +529,116 @@ https://templatemo.com/tm-531-reflux
 
 
         <!-- CONTACT FORM -->
-   <!-- CONTACT FORM -->
-<section class="section contact-me" data-section="section6">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Contact Me</h2>
-      <div class="line-dec"></div>
-      <span>Need to write something here</span>
-    </div>
-    <div class="row">
-      <div class="right-content">
-        <div class="container">
-          <form id="contact" method="post">
+  
+        <section class="section contact-me" data-section="section6">
+          <div class="container">
+            <div class="section-heading">
+              <h2>Contact Me</h2>
+              <div class="line-dec"></div>
+              <span>Need to write something here</span>
+            </div>
             <div class="row">
-              <div class="col-md-6">
-                <fieldset>
-                  <input
-                    name="name"
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Your name..."
-                    required
-                  />
-                </fieldset>
-              </div>
-              <div class="col-md-6">
-                <fieldset>
-                  <input
-                    name="email"
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    placeholder="Your email..."
-                    required
-                  />
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <input
-                    name="subject"
-                    type="text"
-                    class="form-control"
-                    id="subject"
-                    placeholder="Subject..."
-                    required
-                  />
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <textarea
-                    name="message"
-                    rows="6"
-                    class="form-control"
-                    id="message"
-                    placeholder="Your message..."
-                    required
-                  ></textarea>
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="button">
-                    Send Message
-                  </button>
-                </fieldset>
+              <div class="right-content">
+                <div class="container">
+                  <form id="contact" method="post">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <fieldset>
+                          <input
+                            name="name"
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            placeholder="Your name..."
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6">
+                        <fieldset>
+                          <input
+                            name="email"
+                            type="text"
+                            class="form-control"
+                            id="email"
+                            placeholder="Your email..."
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input
+                            name="subject"
+                            type="text"
+                            class="form-control"
+                            id="subject"
+                            placeholder="Subject..."
+                            required
+                          />
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <textarea
+                            name="message"
+                            rows="6"
+                            class="form-control"
+                            id="message"
+                            placeholder="Your message..."
+                            required
+                          ></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="button">
+                            Send Message
+                          </button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          </div>
+        </section>
+        <!-- CONTACT FORM -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+          emailjs.init('-QjxpI4xx6eroa51X');
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  emailjs.init('-QjxpI4xx6eroa51X');
+          document.getElementById('contact').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            emailjs.sendForm('service_nypouim', 'template_iwydzws', this)
+              .then(function(response) {
+                alert('Message sent successfully!');
+                document.getElementById('contact').reset(); // Reset form fields
+              }, function(error) {
+                alert('Failed to send message.');
+              });
+          });
+        </script>
 
-  document.getElementById('contact').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    emailjs.sendForm('service_nypouim', 'template_iwydzws', this)
-      .then(function(response) {
-        alert('Message sent successfully!');
-        document.getElementById('contact').reset(); // Reset form fields
-      }, function(error) {
-        alert('Failed to send message.');
-      });
-  });
-</script>
+        <!-- DOWNLOAD CV -->
+        <!-- DOWNLOAD CV -->
+        <section class="section download-cv" data-section="section7">
+          <div class="container text-center">
+            <div class="section-heading">
+              <h2>Download My CV</h2>
+              <div class="line-dec"></div>
+            </div>
+            <div class="my-4">
+              <a href="https://www.dropbox.com/scl/fi/6g9hgfo65lerj1fs79ccg/Haque_CV.pdf?rlkey=eljso1zb2yuk1muj2xz9my3c6&st=39rpqnh1&dl=1" 
+                class="btn btn-primary btn-lg" 
+                download="Haque_CV.pdf">
+                Download CV
+              </a>
+            </div>
+          </div>
+        </section>
 
 
 
