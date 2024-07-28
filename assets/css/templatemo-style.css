@@ -996,3 +996,87 @@ section.contact-me {
 .content.others ul {
   margin-top: 0;
 }
+/*<!--///////////// ABOUT ////////////-->*/
+/*<!--///////////// ABOUT ////////////-->*/
+/*<!--///////////// ABOUT ////////////-->*/
+.section.about-me {
+  background: #b4b2b2;
+  padding: 50px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading .line-dec {
+  width: 50px;
+  height: 2px;
+  background: #d62444;
+  margin: 20px auto;
+}
+
+.section-heading h5 {
+  font-size: 1.2em;
+  color: black;
+  font-style: italic;
+}
+
+.intro-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.right-text p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+}
+
+.hobbies-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies-section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.hobby {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.hobby:hover {
+  transform: translateY(-5px);
+}
+
+.hobby-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hobby h4 {
+  font-size: 1.2em;
+  color: #333;
+}
