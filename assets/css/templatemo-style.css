@@ -222,7 +222,7 @@ html {
   left: 10%;
   -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
   -webkit-overflow-scrolling: touch;
-  background-color: #a43f49;
+  background-color: #0c5460;
   box-sizing: border-box;
   height: 100vh;
   max-height: 100vh !important;
@@ -1084,8 +1084,8 @@ section.contact-me {
 /*<!--///////////// Download////////////-->*/
 /*<!--///////////// ABODownloadUT ////////////-->*/
 .download-cv .btn {
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white;
+  background-color: white; /* Bootstrap primary color */
+  color: #a43f49;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -1094,5 +1094,5 @@ section.contact-me {
 }
 
 .download-cv .btn:hover {
-  background-color: #0056b3; /* Darker shade of blue for hover effect */
+  background-color: #0c5460; /* Darker shade of blue for hover effect */
 }
