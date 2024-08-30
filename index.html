@@ -61,7 +61,7 @@ https://templatemo.com/tm-531-reflux
             </div>
             <div class="author-content">
               <h2 style="color: white;">Misbahul Haque</h2>
-              <h3 style="font-style: italic; color: white;">Software Developer</h3>
+              <h3 style="font-style: italic; color: white;" data-translate="softwareDeveloper">Software Developer</h3>
               <h5 style="color: white;">Keplerstr. 20/3 <br> 89073, Ulm</h5>
               <strong style="color: white;">mhaque.tuc@gmail.com</strong>
             </div>
@@ -802,7 +802,8 @@ https://templatemo.com/tm-531-reflux
             experience: "Experience",
             work: "My Work",
             contact: "Contact Me",
-            downloadCV: "Download CV"
+            downloadCV: "Download CV",
+            softwareDeveloper: "Software Developer"
           },
           de: {
             about: "Über mich",
@@ -811,7 +812,8 @@ https://templatemo.com/tm-531-reflux
             experience: "Erfahrung",
             work: "Meine Arbeit",
             contact: "Kontaktiere mich",
-            downloadCV: "Lebenslauf herunterladen"
+            downloadCV: "Lebenslauf herunterladen",
+            softwareDeveloper: "Softwareentwickler"
           }
         };
 
@@ -829,6 +831,11 @@ https://templatemo.com/tm-531-reflux
           navLinks[6].textContent = translations[language].downloadCV;
           
           // Repeat for other text elements on the page
+          // Update elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+              const key = element.getAttribute('data-translate');
+              element.textContent = translations[language][key];
+            });
         }
 
         // Event listener for language change
