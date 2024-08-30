@@ -29,6 +29,16 @@ https://templatemo.com/tm-531-reflux
   </head>
 
   <body>
+    <!-- Language Dropdown -->
+      <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+        <select id="language-select" style="padding: 5px;">
+          <option value="en">🇬🇧 English</option>
+          <option value="de">🇩🇪 Deutsch</option>
+        </select>
+      </div>
+
+
+
     <div id="page-wraper">
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
@@ -781,6 +791,56 @@ https://templatemo.com/tm-531-reflux
         });
       });
       </script>
+      <!-- Translation Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const translations = {
+          en: {
+            about: "About Me",
+            education: "Education",
+            skills: "What I’m good at",
+            experience: "Experience",
+            work: "My Work",
+            contact: "Contact Me",
+            downloadCV: "Download CV"
+          },
+          de: {
+            about: "Über mich",
+            education: "Bildung",
+            skills: "Meine Fähigkeiten",
+            experience: "Erfahrung",
+            work: "Meine Arbeit",
+            contact: "Kontaktiere mich",
+            downloadCV: "Lebenslauf herunterladen"
+          }
+        };
+
+        const languageSelect = document.getElementById('language-select');
+        const navLinks = document.querySelectorAll('.main-menu li a');
+
+        // Function to translate the page content
+        function translatePage(language) {
+          navLinks[0].textContent = translations[language].about;
+          navLinks[1].textContent = translations[language].education;
+          navLinks[2].textContent = translations[language].skills;
+          navLinks[3].textContent = translations[language].experience;
+          navLinks[4].textContent = translations[language].work;
+          navLinks[5].textContent = translations[language].contact;
+          navLinks[6].textContent = translations[language].downloadCV;
+          
+          // Repeat for other text elements on the page
+        }
+
+        // Event listener for language change
+        languageSelect.addEventListener('change', function() {
+          const selectedLanguage = this.value;
+          translatePage(selectedLanguage);
+        });
+
+        // Initialize with default language
+        translatePage('en');
+      });
+    </script>
 
       
 
