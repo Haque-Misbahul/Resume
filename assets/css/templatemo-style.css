@@ -11,15 +11,31 @@ https://templatemo.com/tm-531-reflux
 body {
   font-family: "Lato", sans-serif;
 }
-
+/*
 #page-wraper {
-  background: url(../images/page-bg.jpg) no-repeat center center fixed;
+  background: url(../images/page-bg_3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
 }
+*/
+#page-wraper {
+  background: url('assets/images/page-bg_3.jpg') no-repeat center center fixed; /* Default light theme */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  transition: background 0.5s ease; /* Smooth transition for background change */
+}
+
+#theme-toggle-icon {
+  transition: transform 0.3s; /* Smooth transition for icon rotation */
+  cursor: pointer;
+}
+
 
 /* Basic */
 

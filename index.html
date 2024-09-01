@@ -8,6 +8,8 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
@@ -32,12 +34,16 @@ https://templatemo.com/tm-531-reflux
 
   <body>
     <!-- Language Dropdown -->
-      <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
-        <select id="language-select" style="padding: 5px;">
-          <option value="en">🇬🇧 English</option>
-          <option value="de">🇩🇪 Deutsch</option>
-        </select>
-      </div>
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: flex; align-items: center;">
+      <!-- Theme Toggle Icon -->
+      <i id="theme-toggle-icon" class="fa fa-adjust" style="font-size: 24px; margin-right: 10px; cursor: pointer; transition: transform 0.3s;"></i>
+  
+      <!-- Language Dropdown -->
+      <select id="language-select" style="padding: 5px;">
+        <option value="en">🇬🇧 English</option>
+        <option value="de">🇩🇪 Deutsch</option>
+      </select>
+    </div>
 
 
 
@@ -862,6 +868,35 @@ https://templatemo.com/tm-531-reflux
       });
     </script>
 
+<script>
+  // JavaScript for Theme Switching and Icon Color Adjustment
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const pageWrapper = document.getElementById('page-wraper');
+    let isLightTheme = false; // Start with dark theme
+
+    // Set initial theme to dark
+    pageWrapper.style.backgroundImage = "url('assets/images/page-bg.jpg')"; // Dark theme as default
+    themeToggleIcon.style.color = 'white'; // Icon color for dark theme
+
+    // Function to toggle theme
+    function toggleTheme() {
+      if (isLightTheme) {
+        pageWrapper.style.backgroundImage = "url('assets/images/page-bg.jpg')"; // Dark theme
+        themeToggleIcon.style.color = 'white'; // Icon color for dark theme
+        themeToggleIcon.style.transform = "rotate(0deg)"; // Reset rotation
+      } else {
+        pageWrapper.style.backgroundImage = "url('assets/images/page-bg_3.jpg')"; // Light theme
+        themeToggleIcon.style.color = 'black'; // Icon color for light theme
+        themeToggleIcon.style.transform = "rotate(180deg)"; // Rotate icon 180 degrees
+      }
+      isLightTheme = !isLightTheme; // Toggle theme state
+    }
+
+    // Attach click event to theme toggle icon
+    themeToggleIcon.addEventListener('click', toggleTheme);
+  });
+</script>
       
 
 
