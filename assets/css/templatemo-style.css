@@ -1129,10 +1129,10 @@ section.contact-me {
 }
 
 /*<!--///////////// Download////////////-->*/
-/*<!--///////////// ABOUT ////////////-->*/
+/*<!--///////////// ABOUT   ////////////-->*/
 .download-cv .btn {
-  background-color: white; /* Bootstrap primary color */
-  color: #a43f49;
+  background-color: #0c5460; /* Bootstrap primary color */
+  color: White;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -1141,7 +1141,7 @@ section.contact-me {
 }
 
 .download-cv .btn:hover {
-  background-color: #0c5460; /* Darker shade of blue for hover effect */
+  background-color: #a43f49; /* Darker shade of blue for hover effect */
   color: white;
 }
 
