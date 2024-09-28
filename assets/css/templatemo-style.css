@@ -338,7 +338,7 @@ html {
 .white-button a {
   display: inline-block;
   padding: 12px 20px;
-  background-color: #fff;
+  background-color: #a43f49;
   color: #a43f49;
   font-size: 13px;
   font-weight: 800;
@@ -348,15 +348,15 @@ html {
 }
 
 .white-button a:hover {
-  background-color: #a43f49;
+  background-color: #0c5460;
   color: #fff;
 }
 
 button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #fff;
-  color: #a43f49;
+  background-color: #0c5460;
+  color: white;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -369,7 +369,7 @@ button {
 
 button:hover {
   outline: none;
-  background-color: #0c5460;
+  background-color: #a43f49;
   color: #fff;
 }
 
